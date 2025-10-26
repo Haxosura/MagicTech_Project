@@ -55,5 +55,4 @@ public:
 
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 };

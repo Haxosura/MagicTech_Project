@@ -44,7 +44,6 @@ AMagicTech_BaseCharacter::AMagicTech_BaseCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
-
 }
 
 // Called when the game starts or when spawned
@@ -89,9 +88,7 @@ void AMagicTech_BaseCharacter::SetupPlayerInputComponent(class UInputComponent* 
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMagicTech_BaseCharacter::Look);
-
 	}
-
 }
 
 void AMagicTech_BaseCharacter::Move(const FInputActionValue& Value)
